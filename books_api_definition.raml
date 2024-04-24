@@ -1,0 +1,21 @@
+#%RAML 1.0
+---
+title: Books API
+baseUri: https://someweb.site/{version}
+version: 1.0
+
+/users:
+    /authors:
+        /{authorName}: 
+    /books:
+        get:
+        post:
+        put:
+        /{bookTitle}:
+            get:
+            put:
+            delete:
+            /author:
+                get:
+            /publisher:
+                get:
