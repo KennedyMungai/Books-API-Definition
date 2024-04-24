@@ -20,12 +20,35 @@ version: 1.0
             get:
                 queryParameters:
                     author:
+                        displayName: Author
+                        type: string
+                        description: An author's full name
+                        example: Mark Twain
+                        required: false
                     publicationYear:
+                        displayName": Publication Year
+                        type: Number
+                        description: The year the book was published
+                        example: 1984
+                        required: false
                     rating:
+                        displayName: Rating
+                        type: number
+                        description: The rating of the book
+                        example: 3.55
+                        required: false
                     isbn:
+                        displayName: ISBN
+                        type: string
+                        minLength: 10
+                        example: 0321736079
             put:
                 queryParameters:
                     accessToken:
+                        displayName: Access Token
+                        type: string
+                        description: Token giving your permission to make a call
+                        required: true
             delete:
             /author:
                 get:
