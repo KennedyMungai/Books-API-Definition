@@ -18,6 +18,25 @@ version: 1.0
         put:
         /{bookTitle}:
             get:
+                description: Retrieve a specific book title
+                responses:
+                    200:
+                        body:
+                            application/json:
+                                example: | 
+                                {
+                                    "data": {
+                                        "id": "ed1e651de51d5e1d5e51e51de515e",
+                                        "title": "The Catcher in the Rye",
+                                        "description": null,
+                                        "datetime": "2015-04-15T00:00:00.000Z",
+                                        "genre": "Classic",
+                                        "author": "J.D. Salinger",
+                                        "link": "https://someweb.site/books/the_catcher_in_the_rye",
+                                    },
+                                    "success": true,
+                                    "status": 200
+                                }
                 queryParameters:
                     author:
                         displayName: Author
